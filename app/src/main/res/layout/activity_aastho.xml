@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".ActivityAastho">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tx_titulo1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="@string/clasificacion_de_suelos"
+                android:textColor="@color/Black75"
+                android:textSize="32sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toTopOf="@+id/Boton_Clasificar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tx_titulo2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="@string/A.A.S.T.H.O."
+                android:textColor="@color/Black75"
+                android:textSize="34sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tx_titulo1" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/laberl_n10"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/GreyLigth"
+                android:hint="@string/PasaTamiz10"
+
+                app:boxStrokeColor="@color/Black75"
+                app:hintTextColor="@color/Black75"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tx_titulo2"
+                app:suffixText="@string/Simb_porcentaje">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_pasaTamiz10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="3" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/label_n40"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/GreyLigth"
+                android:hint="@string/PasaTamiz40"
+                android:inputType="number"
+                app:boxStrokeColor="@color/Black75"
+                app:hintTextColor="@color/Black75"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/laberl_n10"
+                app:suffixText="@string/Simb_porcentaje">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_pasaTamiz40"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/label_n200"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/GreyLigth"
+                android:hint="@string/PasaTamiz200"
+                android:inputType="number"
+                app:boxStrokeColor="@color/Black75"
+                app:hintTextColor="@color/Black75"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_n40"
+                app:suffixText="@string/Simb_porcentaje">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_pasaTamiz200"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/label_LL"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/GreyLigth"
+                android:hint="@string/LimiteLiquido"
+                android:inputType="number"
+                app:boxStrokeColor="@color/GreyLigth"
+                app:hintTextColor="@color/Black75"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_n200"
+                app:suffixText="@string/Simb_porcentaje">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_limiteLiquido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/label_LP"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/GreyLigth"
+                android:hint="@string/LimitePlatico"
+                android:inputType="number"
+                app:boxStrokeColor="@color/Black75"
+                app:hintTextColor="@color/Black75"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_LL"
+                app:suffixText="@string/Simb_porcentaje">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_limitePlastico"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="3" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tx_grupo"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="@string/Tx_Grupo_inicial"
+                android:textColor="@color/Black75"
+                android:textSize="30sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toTopOf="@+id/tx_grupo2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_LP"
+                app:layout_constraintVertical_bias="0.5"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tx_grupo2"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="@string/Tx_Grupo_inicial"
+                android:textColor="@color/Black75"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toTopOf="@+id/Boton_Clasificar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tx_grupo"
+                app:layout_constraintVertical_bias="0.4" />
+
+            <Button
+                android:id="@+id/Boton_Clasificar"
+                android:layout_width="175dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="500dp"
+                android:backgroundTint="@color/Grey"
+                android:onClick="clasificar"
+                android:text="@string/Clasificar"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/Boton_Nuevo"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tx_titulo1"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <Button
+                android:id="@+id/Boton_Nuevo"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="175dp"
+                android:layout_height="60dp"
+                android:onClick="limpiar"
+                android:text="@string/Nuevo"
+                android:textColor="@color/Grey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/Boton_Clasificar"
+                app:layout_constraintTop_toTopOf="@id/Boton_Clasificar"
+                app:layout_constraintVertical_bias="0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">GeoClass</string>
+    <string name="clasificacion_de_suelos">Clasificación de Suelos</string>
+    <string name="A.A.S.T.H.O.">A.A.S.T.H.O.</string>
+    <string name="S.U.C.S.">S.U.C.S.</string>
+    <string name="PasaTamiz4">Porcentaje que pasa tamiz #4</string>
+    <string name="PasaTamiz10">Porcentaje que pasa tamiz #10 </string>
+    <string name="PasaTamiz40">Porcentaje que pasa tamiz #40 </string>
+    <string name="PasaTamiz200">Porcentaje que pasa tamiz #200 </string>
+    <string name="PerdidaDeMasa">Porcentaje de pérdida de masa en horno </string>
+    <string name="LimiteLiquido">Límite líquido </string>
+    <string name="LimitePlatico">Límite plástico</string>
+    <string name="Defec">Diam_10</string>
+    <string name="D30">Diam_30</string>
+    <string name="D60">Diam_60</string>
+    <string name="Tx_Grupo_inicial"></string>
+    <string name="Simb_porcentaje">%</string>
+    <string name="Unidad_mm">mm</string>
+    <string name="Clasificar">Clasificar</string>
+    <string name="Nuevo">Nuevo</string>
+    <string name="Linkein">Linkein</string>
+
+</resources>
