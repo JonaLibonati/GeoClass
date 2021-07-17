@@ -1,4 +1,4 @@
-package com.example.aastho;
+package com.example.geoclass;
 
 import org.junit.Test;
 

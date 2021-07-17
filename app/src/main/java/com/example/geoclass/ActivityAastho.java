@@ -1,4 +1,4 @@
-package com.example.aastho;
+package com.example.geoclass;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package com.example.aastho;
+package com.example.geoclass;
 
 public class ClasificacionSucs extends Suelo {
 
@@ -29,7 +29,7 @@ public class ClasificacionSucs extends Suelo {
     public String Nombre () {
 
         String auxiliar = "";
-        if (menor0mayor100() || LimiteSuelos()) {
+        if (menor0mayor100() || LimiteSuelos() || LPmayorLL()) {
             auxiliar = "";
         }else if (FFEntre0a4()) {
             auxiliar = GravaArena()[1] + Graduado()[1] + ConGravaConArena()[0];
@@ -84,8 +84,14 @@ public class ClasificacionSucs extends Suelo {
 
         String auxiliar = "";
 
-        if (menor0mayor100() || LimiteSuelos()) {
-            auxiliar = "¡Error!\nLos valores indicados no son válidos";
+        if (menor0mayor100()) {
+            auxiliar = "¡Error!\nPorcentajes fuera de 0 a 100";
+
+        } else if (LimiteSuelos()) {
+            auxiliar = "¡Error!\nFuera del límite de Casagrande";
+
+        } else if (LPmayorLL()) {
+            auxiliar = "¡Error!\nLímite plástico > Límite líquido";
 
         } else if (FFEntre0a4()) {
             auxiliar = GravaArena()[0] + Graduado()[0];
@@ -217,65 +223,5 @@ public class ClasificacionSucs extends Suelo {
         return auxiliar;
     }
 
-    //Metodo que determina si el suelo es organico o inorganico
 
-    public boolean SueloOrganico () {
-        return perdidaDeMasa >= 25;
-    }
-
-    //Metodo que determina si es arcilla
-
-    public boolean EsArcilla () {
-        return IndicePlastidad() > 7 && IndicePlastidad() > (0.73 * (limiteLiquido - 20));
-    }
-
-    //Metodo que determina si es limo
-
-    public boolean EsLimo () {
-        return (limiteLiquido > 20 && IndicePlastidad() <= (0.73 * (limiteLiquido - 20))) || IndicePlastidad() < 4;
-    }
-
-    //Metodo que determina si es limo-arcilla
-
-    public boolean EsLimoArcilla () {
-        return IndicePlastidad() >= 4 && IndicePlastidad() <= 7 && IndicePlastidad() > (0.73 * (limiteLiquido - 20));
-    }
-
-    //Metodo si valores entre0a100
-
-    public boolean menor0mayor100() {
-        return pasaTamiz200 < 0 || pasaTamiz200 > 100 || pasaTamiz4 < 0 || pasaTamiz4 > 100 ||
-                perdidaDeMasa < 0 || perdidaDeMasa > 100 || limiteLiquido < 0 || limiteLiquido > 100 ||
-                limitePlastico < 0 || limitePlastico > 100;
-    }
-
-    // Metodo si suelo fino entre 0a4
-
-    public boolean FFEntre0a4() {
-        return pasaTamiz200 < 5;
-    }
-
-    // Metodo si suelo fino entre 5a11
-
-    public boolean FFEntre5a11() {
-        return pasaTamiz200 < 12 && pasaTamiz200 >= 5;
-    }
-
-    // Metodo si suelo fino entre 12a49
-
-    public boolean FFEntre12a49() {
-        return pasaTamiz200 < 50 && pasaTamiz200 >= 12;
-    }
-
-    //metodo que determina si Fraccion gruesa entre 0a14
-
-    public boolean FGEntre0a14 () {
-        return (ArenasContenido() + GravasContenido()) < 15;
-    }
-
-    //metodo que determina si Fraccion gruesa entre 15a29
-
-    public boolean FGEntre15a29 () {
-        return (ArenasContenido() + GravasContenido()) >= 15 && (ArenasContenido() + GravasContenido()) < 30;
-    }
 }

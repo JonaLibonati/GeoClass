@@ -99,15 +99,15 @@
                     android:maxLength="3" />
             </com.google.android.material.textfield.TextInputLayout>
 
-
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/label_n200"
+                android:id="@+id/label_D30"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:background="@color/GreyLigth"
                 android:hint="@string/D30"
+                android:enabled="false"
                 app:boxStrokeColor="@color/Black75"
                 app:hintTextColor="@color/Black75"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -121,7 +121,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
-                    android:maxLength="5" />
+                    android:maxLength="5"
+                    android:enabled="false"/>
+
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -132,6 +134,7 @@
                 android:layout_marginTop="15dp"
                 android:background="@color/GreyLigth"
                 android:hint="@string/Defec"
+                android:enabled="false"
                 app:boxStrokeColor="@color/Black75"
                 app:hintTextColor="@color/Black75"
                 app:layout_constraintEnd_toStartOf="@id/label_n200"
@@ -145,7 +148,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
-                    android:maxLength="5" />
+                    android:maxLength="5"
+                    android:enabled="false"/>
+
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -156,11 +161,12 @@
                 android:layout_marginTop="15dp"
                 android:background="@color/GreyLigth"
                 android:hint="@string/D60"
+                android:enabled="false"
                 app:boxStrokeColor="@color/Black75"
                 app:hintTextColor="@color/Black75"
                 app:layout_constraintEnd_toEndOf="@id/label_n40"
                 app:layout_constraintHorizontal_bias="1"
-                app:layout_constraintStart_toEndOf="@id/label_n200"
+                app:layout_constraintStart_toEndOf="@id/label_D30"
                 app:layout_constraintTop_toBottomOf="@id/label_n40"
                 app:suffixText="@string/Unidad_mm">
 
@@ -169,7 +175,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
-                    android:maxLength="5" />
+                    android:maxLength="5"
+                    android:enabled="false"/>
+
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -180,12 +188,13 @@
                 android:layout_marginTop="15dp"
                 android:background="@color/GreyLigth"
                 android:hint="@string/LimiteLiquido"
+                android:enabled="false"
                 app:boxStrokeColor="@color/GreyLigth"
                 app:hintTextColor="@color/Black75"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintStart_toStartOf="@id/label_Defec"
-                app:layout_constraintTop_toBottomOf="@id/label_n200"
+                app:layout_constraintTop_toBottomOf="@id/label_D30"
                 app:suffixText="@string/Simb_porcentaje">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -193,7 +202,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:maxLength="3" />
+                    android:maxLength="3"
+                    android:enabled="false"/>
 
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -206,12 +216,13 @@
                 android:layout_marginTop="15dp"
                 android:background="@color/GreyLigth"
                 android:hint="@string/LimitePlatico"
+                android:enabled="false"
                 app:boxStrokeColor="@color/GreyLigth"
                 app:hintTextColor="@color/Black75"
                 app:layout_constraintEnd_toEndOf="@id/label_D60"
                 app:layout_constraintHorizontal_bias="1"
                 app:layout_constraintStart_toEndOf="@id/label_LL"
-                app:layout_constraintTop_toBottomOf="@id/label_n200"
+                app:layout_constraintTop_toBottomOf="@id/label_D30"
                 app:suffixText="@string/Simb_porcentaje">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -219,7 +230,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:maxLength="3" />
+                    android:maxLength="3"
+                    android:enabled="false"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -231,6 +243,7 @@
                 android:layout_marginTop="15dp"
                 android:background="@color/GreyLigth"
                 android:hint="@string/PerdidaDeMasa"
+                android:enabled="false"
                 app:boxStrokeColor="@color/Black75"
                 app:hintTextColor="@color/Black75"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -244,7 +257,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:maxLength="3" />
+                    android:maxLength="3"
+                    android:enabled="false"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 

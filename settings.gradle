@@ -1,2 +1,2 @@
-rootProject.name = "AASTHO"
+rootProject.name = "GeoClass"
 include ':app'

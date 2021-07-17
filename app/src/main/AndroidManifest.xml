@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.aastho">
+    package="com.example.geoclass">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AASTHO">
         <activity
-            android:name=".ActivityInicio"
+            android:name="com.example.geoclass.ActivityInicio"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,10 +19,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ActivityAastho">
+            android:name="com.example.geoclass.ActivityAastho">
         </activity>
         <activity
-            android:name=".ActivitySucs">>
+            android:name="com.example.geoclass.ActivitySucs">>
         </activity>
     </application>
 
