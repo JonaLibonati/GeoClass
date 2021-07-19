@@ -26,7 +26,7 @@ public abstract class Suelo {
     //Este metodo representa el limite superior de la carta de plasticidad de Casagrande.
 
     public boolean LimiteSuelos () {
-        return IndicePlastidad() > 0.9 * (limiteLiquido - 8) || limiteLiquido <= 8;
+        return (IndicePlastidad() > 0.9 * (limiteLiquido - 8) && limiteLiquido >=8) || (limiteLiquido <= 8 && limiteLiquido >0);
     }
 
     // Metodo que calcula Coeficiente de Uniformidad
@@ -80,7 +80,8 @@ public abstract class Suelo {
     //Metodo si valores entre0a100
 
     public boolean menor0mayor100() {
-        return pasaTamiz200 < 0 || pasaTamiz200 > 100 || pasaTamiz4 < 0 || pasaTamiz4 > 100 ||
+        return pasaTamiz200 < 0 || pasaTamiz200 > 100 || pasaTamiz40 < 0 || pasaTamiz40 > 100 ||
+                pasaTamiz10 < 0 || pasaTamiz10 > 100 ||pasaTamiz4 < 0 || pasaTamiz4 > 100 ||
                 perdidaDeMasa < 0 || perdidaDeMasa > 100 || limiteLiquido < 0 || limiteLiquido > 100 ||
                 limitePlastico < 0 || limitePlastico > 100;
     }

@@ -26,7 +26,7 @@
                 android:gravity="center"
                 android:text="@string/clasificacion_de_suelos"
                 android:textColor="@color/Black75"
-                android:textSize="32sp"
+                android:textSize="@dimen/titulo_1.2"
                 android:textStyle="bold|italic"
                 app:layout_constraintBottom_toTopOf="@+id/Boton_Clasificar"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -42,7 +42,7 @@
                 android:gravity="center"
                 android:text="@string/S.U.C.S."
                 android:textColor="@color/Black75"
-                android:textSize="34sp"
+                android:textSize="@dimen/titulo_2"
                 android:textStyle="bold|italic"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -52,7 +52,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/laberl_n10"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="350dp"
+                android:layout_width="@dimen/Ancho_Conte_grande"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:background="@color/GreyLigth"
@@ -78,7 +78,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/label_n40"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="350dp"
+                android:layout_width="@dimen/Ancho_Conte_grande"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:background="@color/GreyLigth"
@@ -102,7 +102,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/label_D30"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="100dp"
+                android:layout_width="@dimen/Ancho_Conte_pequeño"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:background="@color/GreyLigth"
@@ -129,7 +129,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/label_Defec"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="100dp"
+                android:layout_width="@dimen/Ancho_Conte_pequeño"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:background="@color/GreyLigth"
@@ -137,7 +137,6 @@
                 android:enabled="false"
                 app:boxStrokeColor="@color/Black75"
                 app:hintTextColor="@color/Black75"
-                app:layout_constraintEnd_toStartOf="@id/label_n200"
                 app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintStart_toStartOf="@id/label_n40"
                 app:layout_constraintTop_toBottomOf="@id/label_n40"
@@ -156,7 +155,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/label_D60"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="100dp"
+                android:layout_width="@dimen/Ancho_Conte_pequeño"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:background="@color/GreyLigth"
@@ -183,7 +182,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/label_LL"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="160dp"
+                android:layout_width="@dimen/Ancho_Conte_mediano"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:background="@color/GreyLigth"
@@ -211,7 +210,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/label_LP"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="160dp"
+                android:layout_width="@dimen/Ancho_Conte_mediano"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:background="@color/GreyLigth"
@@ -238,7 +237,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/label_PM"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="350dp"
+                android:layout_width="@dimen/Ancho_Conte_grande"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:background="@color/GreyLigth"
@@ -264,13 +263,13 @@
 
             <TextView
                 android:id="@+id/tx_grupo"
-                android:layout_width="350dp"
+                android:layout_width="@dimen/Ancho_Conte_grande"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:gravity="center"
                 android:text="@string/Tx_Grupo_inicial"
                 android:textColor="@color/Black75"
-                android:textSize="30sp"
+                android:textSize="@dimen/TextoGrupo1"
                 android:textStyle="bold|italic"
                 app:layout_constraintBottom_toTopOf="@+id/tx_grupo2"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -282,13 +281,13 @@
 
             <TextView
                 android:id="@+id/tx_grupo2"
-                android:layout_width="350dp"
+                android:layout_width="@dimen/Ancho_Conte_grande"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:gravity="center"
                 android:text="@string/Tx_Grupo_inicial"
                 android:textColor="@color/Black75"
-                android:textSize="20sp"
+                android:textSize="@dimen/TextoGrupo2"
                 android:textStyle="bold|italic"
                 app:layout_constraintBottom_toTopOf="@+id/Boton_Clasificar"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -297,11 +296,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/tx_grupo"
                 app:layout_constraintVertical_bias="0.4" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/Boton_Clasificar"
-                android:layout_width="175dp"
+                android:layout_width="@dimen/ancho_botones_pequeños"
                 android:layout_height="60dp"
-                android:layout_marginTop="500dp"
+                android:layout_marginTop="@dimen/largoTotalResto"
                 android:backgroundTint="@color/Grey"
                 android:onClick="clasificar"
                 android:text="@string/Clasificar"
@@ -314,10 +313,10 @@
                 app:layout_constraintTop_toBottomOf="@+id/tx_titulo1"
                 app:layout_constraintVertical_bias="0.5" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/Boton_Nuevo"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:layout_width="175dp"
+                android:layout_width="@dimen/ancho_botones_pequeños"
                 android:layout_height="60dp"
                 android:onClick="limpiar"
                 android:text="@string/Nuevo"

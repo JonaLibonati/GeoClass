@@ -41,37 +41,51 @@ public class ClasificacionSucs extends Suelo {
             auxiliar = GravaArena()[1] + LimoArcilla()[2] + ConGravaConArena() [0];
 
         } else {
-            if (EsArcilla()) {
-                if (FGEntre0a14()) {
-                    auxiliar = LimoArcilla()[1] + Plasticidad()[1];
+            if (!SueloOrganico()) {
+                if (EsArcilla()) {
+                    if (FGEntre0a14()) {
+                        auxiliar = LimoArcilla()[1] + Plasticidad()[1];
 
-                } else if (FGEntre15a29()) {
-                    auxiliar = LimoArcilla()[1] + Plasticidad()[1] + GravaArena()[3];
+                    } else if (FGEntre15a29()) {
+                        auxiliar = LimoArcilla()[1] + Plasticidad()[1] + GravaArena()[3];
 
-                }else {
-                    auxiliar = LimoArcilla()[1] + Plasticidad()[1] + GravaArena()[2] + ConGravaConArena()[0];
+                    } else {
+                        auxiliar = LimoArcilla()[1] + Plasticidad()[1] + GravaArena()[2] + ConGravaConArena()[0];
+                    }
                 }
+                if (EsLimo()) {
+                    if (FGEntre0a14()) {
+                        auxiliar = LimoArcilla()[1] + Plasticidad()[2];
 
-            } if (EsLimo()) {
-                if (FGEntre0a14()) {
-                    auxiliar = LimoArcilla()[1] + Plasticidad()[2];
+                    } else if (FGEntre15a29()) {
+                        auxiliar = LimoArcilla()[1] + Plasticidad()[2] + GravaArena()[3];
 
-                } else if (FGEntre15a29()) {
-                    auxiliar = LimoArcilla()[1] + Plasticidad()[2] + GravaArena()[3];
+                    } else {
+                        auxiliar = LimoArcilla()[1] + Plasticidad()[2] + GravaArena()[2] + ConGravaConArena()[0];
+                    }
 
-                }else {
-                    auxiliar = LimoArcilla()[1] + Plasticidad()[2] + GravaArena()[2] + ConGravaConArena()[0];
+                } else if (EsLimoArcilla()) {
+                    if (FGEntre0a14()) {
+                        auxiliar = LimoArcilla()[1];
+
+                    } else if (FGEntre15a29()) {
+                        auxiliar = LimoArcilla()[1] + GravaArena()[3];
+
+                    } else {
+                        auxiliar = LimoArcilla()[1] + GravaArena()[2] + ConGravaConArena()[0];
+                    }
                 }
+            } else {
+                if (EsArcilla() || EsLimoArcilla() || EsLimo()) {
+                    if (FGEntre0a14()) {
+                        auxiliar = LimoArcilla()[1] + LimoArcilla()[5];
 
-            } else if (EsLimoArcilla()) {
-                if (FGEntre0a14()) {
-                    auxiliar = LimoArcilla()[1];
+                    } else if (FGEntre15a29()) {
+                        auxiliar = LimoArcilla()[1] + LimoArcilla()[5] + GravaArena()[3];
 
-                } else if (FGEntre15a29()) {
-                    auxiliar = LimoArcilla()[1] + GravaArena()[3];
-
-                }else {
-                    auxiliar = LimoArcilla()[1] + GravaArena()[2] + ConGravaConArena()[0];
+                    } else {
+                        auxiliar = LimoArcilla()[1] + LimoArcilla()[5] + GravaArena()[2] + ConGravaConArena()[0];
+                    }
                 }
             }
         }
@@ -113,10 +127,16 @@ public class ClasificacionSucs extends Suelo {
             }
 
         } else {
-            if (EsArcilla() || EsLimo()) {
-                auxiliar = LimoArcilla()[0] + Plasticidad()[0];
-            } else if (EsLimoArcilla()) {
-                auxiliar = "CL-ML";
+            if (!SueloOrganico()) {
+                if (EsArcilla() || EsLimo() && !SueloOrganico()) {
+                    auxiliar = LimoArcilla()[0] + Plasticidad()[0];
+
+                } else if (EsLimoArcilla() && !SueloOrganico()) {
+                    auxiliar = "CL-ML";
+                }
+
+            } else {
+                auxiliar = LimoArcilla()[4] + Plasticidad()[0];
             }
         }
         return auxiliar;
@@ -146,24 +166,31 @@ public class ClasificacionSucs extends Suelo {
 
     public String [] LimoArcilla () {
 
-        String[] auxiliar = new String[4];
+        String[] auxiliar = new String[6];
         if (EsArcilla()){
             auxiliar [0] = "C";
             auxiliar [1] = "Arcilla";
             auxiliar [2] = " arcillosa";
             auxiliar [3] = " con arcilla";
+            auxiliar [4] = "O";
+            auxiliar [5] = " orgánica";
+
         }
         if (EsLimo()) {
             auxiliar [0] = "M";
             auxiliar [1] = "Limo";
             auxiliar [2] = " limosa";
             auxiliar [3] = " con limo";
+            auxiliar [4] = "O";
+            auxiliar [5] = " orgánico";
         }
         if (EsLimoArcilla()){
             auxiliar [0] = "C";
             auxiliar [1] = "Arcilla limosa";
             auxiliar [2] = " limo arcillosa";
             auxiliar [3] = "M";
+            auxiliar [4] = "O";
+            auxiliar [5] = " orgánica";
         }
         return auxiliar;
     }

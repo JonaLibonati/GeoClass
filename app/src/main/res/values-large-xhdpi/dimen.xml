@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="titulo_1">90sp</dimen>
+    <dimen name="titulo_1.2">55sp</dimen>
+    <dimen name="titulo_2">50sp</dimen>
+    <dimen name="ancho_botones_grandes">500dp</dimen>
+    <dimen name="ancho_botones_pequeños">250dp</dimen>
+    <dimen name="distancia_entre_botones">30dp</dimen>
+    <dimen name="TextoGrupo1">45sp</dimen>
+    <dimen name="TextoGrupo2">30sp</dimen>
+    <dimen name="Ancho_Conte_grande">500dp</dimen>
+    <dimen name="Ancho_Conte_mediano">230dp</dimen>
+    <dimen name="Ancho_Conte_pequeño">140dp</dimen>
+    <dimen name="largoTotalInicio">400dp</dimen>
+    <dimen name="largoTotalResto">600dp</dimen>
+</resources>

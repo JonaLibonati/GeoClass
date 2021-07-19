@@ -26,6 +26,13 @@ public class ActivityInicio extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void donar (View view) {
+        String url = "https://www.paypal.com/donate?hosted_button_id=PFVK7JNA2PQJL";
+        Uri uri = Uri.parse(url);
+        Intent i = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(i);
+    }
+
     public void linkein (View view) {
 
         String url = "https://www.linkedin.com/in/jonathan-libonati/";

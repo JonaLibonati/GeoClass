@@ -78,10 +78,10 @@ public class ActivityAastho extends AppCompatActivity {
             int limiteLiquido = IntegerParse(et_LL);
             int limitePlastico = IntegerParse(et_LP);
 
-            ClasificacionAastho Suelo = new ClasificacionAastho(pasaTamiz200, pasaTamiz40, pasaTamiz10,
+            Suelo Suelo = new ClasificacionAastho(pasaTamiz200, pasaTamiz40, pasaTamiz10,
                     limiteLiquido, limitePlastico);
 
-            if (Suelo.LimiteSuelos() || Suelo.menor0mayor100()) {
+            if (Suelo.LimiteSuelos() || Suelo.menor0mayor100() || Suelo.LPmayorLL()) {
                 tv_grupo.setTextSize(22);
                 tv_grupo.setText(Suelo.clasificar()[0]);
             } else {

@@ -209,6 +209,9 @@ public class ActivitySucs extends AppCompatActivity {
                     lay_LL.setEnabled(false);
                     lay_LP.setEnabled(false);
                     lay_PM.setEnabled(false);
+                    et_LL.setText(null);
+                    et_LP.setText(null);
+                    et_PM.setText(null);
 
                 } else if (pasaTamiz200 >= 12 && pasaTamiz200 < 50){
                     et_D10.setEnabled(false);
@@ -223,6 +226,11 @@ public class ActivitySucs extends AppCompatActivity {
                     lay_LL.setEnabled(true);
                     lay_LP.setEnabled(true);
                     lay_PM.setEnabled(false);
+                    et_D10.setText(null);
+                    et_D30.setText(null);
+                    et_D60.setText(null);
+                    et_PM.setText(null);
+
                 } else {
                     et_D10.setEnabled(false);
                     et_D30.setEnabled(false);
@@ -236,6 +244,9 @@ public class ActivitySucs extends AppCompatActivity {
                     lay_LL.setEnabled(true);
                     lay_LP.setEnabled(true);
                     lay_PM.setEnabled(true);
+                    et_D10.setText(null);
+                    et_D30.setText(null);
+                    et_D60.setText(null);
                 }
             }
 

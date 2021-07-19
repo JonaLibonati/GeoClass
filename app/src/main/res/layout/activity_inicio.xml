@@ -15,7 +15,7 @@
         android:gravity="center"
         android:text="@string/app_name"
         android:textColor="@color/Black75"
-        android:textSize="60sp"
+        android:textSize="@dimen/titulo_1"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/Boton_linkein"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +31,7 @@
         android:gravity="center"
         android:text="@string/clasificacion_de_suelos"
         android:textColor="@color/Black75"
-        android:textSize="34sp"
+        android:textSize="@dimen/titulo_2"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -39,11 +39,12 @@
         app:layout_constraintTop_toBottomOf="@+id/tx_titulo1" />
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/Boton_sucs"
-        android:layout_width="350dp"
+        android:layout_width="@dimen/ancho_botones_grandes"
         android:layout_height="60dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="@dimen/distancia_entre_botones"
+        android:layout_marginTop="@dimen/distancia_entre_botones"
         android:backgroundTint="@color/Grey"
         android:text="@string/S.U.C.S."
         android:textColor="@color/white"
@@ -56,26 +57,42 @@
         app:layout_constraintVertical_bias="0.3"
         app:layout_constraintVertical_chainStyle="packed" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/Boton_asstho"
-        android:layout_width="350dp"
+        android:layout_width="@dimen/ancho_botones_grandes"
         android:layout_height="60dp"
         android:layout_marginTop="0dp"
+        android:layout_marginBottom="@dimen/distancia_entre_botones"
         android:backgroundTint="@color/Grey"
         android:textColor="@color/white"
         android:onClick="aastho"
         android:text="@string/A.A.S.T.H.O."
-        app:layout_constraintBottom_toTopOf="@id/Boton_linkein"
+        app:layout_constraintBottom_toTopOf="@id/Boton_donar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Boton_sucs" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Boton_donar"
+        android:layout_width="@dimen/ancho_botones_grandes"
+        android:layout_height="60dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="@dimen/distancia_entre_botones"
+        android:textColor="@color/Grey"
+        android:onClick="donar"
+        android:text="@string/donar"
+        app:layout_constraintBottom_toTopOf="@id/Boton_linkein"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Boton_asstho"/>
+
     <ImageButton
         android:id="@+id/Boton_linkein"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="@dimen/largoTotalInicio"
         android:backgroundTint="@color/Grey"
         android:onClick="linkein"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -87,5 +104,6 @@
         app:srcCompat="@mipmap/ic_linkein"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:contentDescription="@string/Linkein" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
