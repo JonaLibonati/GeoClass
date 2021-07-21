@@ -2,7 +2,10 @@ package com.example.geoclass;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,23 +24,21 @@ public class ActivityAastho extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aastho);
-        Toast.makeText(this, "OnCreate", Toast.LENGTH_SHORT).show();
-        // La actividad está Creada.
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_iconapp);
 
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Toast.makeText(this, "OnStart", Toast.LENGTH_SHORT).show();
-        // La actividad está a punto de hacerse visible.
+
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Toast.makeText(this, "OnResume", Toast.LENGTH_SHORT).show();
-        // La actividad se ha vuelto visible (ahora se "reanuda").
 
         et_n10 = findViewById(R.id.et_pasaTamiz10);
         et_n40 = findViewById(R.id.et_pasaTamiz40);
@@ -46,27 +47,30 @@ public class ActivityAastho extends AppCompatActivity {
         et_LP = findViewById(R.id.et_limitePlastico);
         tv_grupo = findViewById(R.id.tx_grupo);
         tv_grupo2 = findViewById(R.id.tx_grupo2);
+
+        EsconderTecladoConEnter(et_n10);
+        EsconderTecladoConEnter(et_n40);
+        EsconderTecladoConEnter(et_n200);
+        EsconderTecladoConEnter(et_LL);
+        EsconderTecladoConEnter(et_LP);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Toast.makeText(this, "OnPause", Toast.LENGTH_SHORT).show();
-        // Enfocarse en otra actividad  (esta actividad está a punto de ser "detenida").
+
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Toast.makeText(this, "OnStop", Toast.LENGTH_SHORT).show();
-        // La actividad ya no es visible (ahora está "detenida")
+
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Toast.makeText(this, "OnDestroy", Toast.LENGTH_SHORT).show();
-        // La actividad está a punto de ser destruida.
+
     }
 
     public void clasificar (View view) {
@@ -123,6 +127,7 @@ public class ActivityAastho extends AppCompatActivity {
             et_LL.setEnabled(false);
             et_LP.setEnabled(false);
         }
+
         public void EtEnable () {
 
             et_n10.setEnabled(true);
@@ -131,7 +136,32 @@ public class ActivityAastho extends AppCompatActivity {
             et_LL.setEnabled(true);
             et_LP.setEnabled(true);
         }
+
+    // Metodo para esconder teclado con Enter
+
+    public void EsconderTecladoConEnter (EditText et) {
+
+        et.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+
+            @Override
+            public boolean onEditorAction (TextView textView,int actionId, KeyEvent keyEvent){
+                if (actionId == EditorInfo.IME_ACTION_DONE
+                        || keyEvent.getAction() == KeyEvent.ACTION_DOWN
+                        || keyEvent.getAction() == KeyEvent.KEYCODE_ENTER) {
+
+                    if(getCurrentFocus()!=null) {
+                        InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+                        inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+                    }
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        });
     }
+
+}
 
 
 

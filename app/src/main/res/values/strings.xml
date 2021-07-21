@@ -13,7 +13,7 @@
     <string name="Defec">Diam_10</string>
     <string name="D30">Diam_30</string>
     <string name="D60">Diam_60</string>
-    <string name="Tx_Grupo_inicial"></string>
+    <string name="Tx_Grupo_inicial" />
     <string name="Simb_porcentaje">%</string>
     <string name="Unidad_mm">mm</string>
     <string name="Clasificar">Clasificar</string>

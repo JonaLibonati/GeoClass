@@ -121,4 +121,5 @@ public abstract class Suelo {
     public boolean FGEntre15a29 () {
         return (ArenasContenido() + GravasContenido()) >= 15 && (ArenasContenido() + GravasContenido()) < 30;
     }
+
 }

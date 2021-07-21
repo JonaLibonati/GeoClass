@@ -2,12 +2,17 @@ package com.example.geoclass;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.view.KeyEventDispatcher;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -46,23 +51,19 @@ public class ActivitySucs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sucs);
-        Toast.makeText(this, "OnCreate", Toast.LENGTH_SHORT).show();
-        // La actividad está Creada.
 
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_iconapp);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Toast.makeText(this, "OnStart", Toast.LENGTH_SHORT).show();
-        // La actividad está a punto de hacerse visible.
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Toast.makeText(this, "OnResume", Toast.LENGTH_SHORT).show();
-        // La actividad se ha vuelto visible (ahora se "reanuda").
 
         et_n4 = findViewById(R.id.et_pasaTamiz4);
         et_n200 = findViewById(R.id.et_pasaTamiz200);
@@ -83,27 +84,30 @@ public class ActivitySucs extends AppCompatActivity {
 
         datosNecesarios();
 
+        EsconderTecladoConEnter(et_n4);
+        EsconderTecladoConEnter(et_n200);
+        EsconderTecladoConEnter(et_LL);
+        EsconderTecladoConEnter(et_LP);
+        EsconderTecladoConEnter(et_D10);
+        EsconderTecladoConEnter(et_D30);
+        EsconderTecladoConEnter(et_D60);
+        EsconderTecladoConEnter(et_PM);
+
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Toast.makeText(this, "OnPause", Toast.LENGTH_SHORT).show();
-        // Enfocarse en otra actividad  (esta actividad está a punto de ser "detenida").
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Toast.makeText(this, "OnStop", Toast.LENGTH_SHORT).show();
-        // La actividad ya no es visible (ahora está "detenida")
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Toast.makeText(this, "OnDestroy", Toast.LENGTH_SHORT).show();
-        // La actividad está a punto de ser destruida.
     }
 
     public void clasificar (View view) {
@@ -190,6 +194,7 @@ public class ActivitySucs extends AppCompatActivity {
     public void datosNecesarios () {
         et_n200.addTextChangedListener(new TextWatcher () {
 
+            @Override
             public void afterTextChanged(Editable s) {
 
                 try {
@@ -248,10 +253,11 @@ public class ActivitySucs extends AppCompatActivity {
                     et_D30.setText(null);
                     et_D60.setText(null);
                 }
+
             }
-
+            @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
-
+            @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
                 try {
@@ -261,6 +267,30 @@ public class ActivitySucs extends AppCompatActivity {
         });
     }
 
+
+    // Metodo para esconder teclado con Enter
+
+    public void EsconderTecladoConEnter (EditText et) {
+
+        et.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+
+        @Override
+        public boolean onEditorAction (TextView textView,int actionId, KeyEvent keyEvent){
+            if (actionId == EditorInfo.IME_ACTION_DONE
+                    || keyEvent.getAction() == KeyEvent.ACTION_DOWN
+                    || keyEvent.getAction() == KeyEvent.KEYCODE_ENTER) {
+
+                if(getCurrentFocus()!=null) {
+                    InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+                    inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+                }
+                return true;
+            } else {
+                return false;
+            }
+        }
+    });
+    }
 
     public int IntegerParse (EditText editText){
         String et = editText.getText().toString();

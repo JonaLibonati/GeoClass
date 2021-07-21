@@ -61,7 +61,7 @@ public class ClasificacionSucs extends Suelo {
                         auxiliar = LimoArcilla()[1] + Plasticidad()[2] + GravaArena()[3];
 
                     } else {
-                        auxiliar = LimoArcilla()[1] + Plasticidad()[2] + GravaArena()[2] + ConGravaConArena()[0];
+                        auxiliar = LimoArcilla()[1] + Plasticidad()[2] + GravaArena()[4] + ConGravaConArena()[0];
                     }
 
                 } else if (EsLimoArcilla()) {
@@ -101,11 +101,12 @@ public class ClasificacionSucs extends Suelo {
         if (menor0mayor100()) {
             auxiliar = "¡Error!\nPorcentajes fuera de 0 a 100";
 
+        } else if (LPmayorLL()) {
+            auxiliar = "¡Error!\nLímite plástico > Límite líquido";
+
         } else if (LimiteSuelos()) {
             auxiliar = "¡Error!\nFuera del límite de Casagrande";
 
-        } else if (LPmayorLL()) {
-            auxiliar = "¡Error!\nLímite plástico > Límite líquido";
 
         } else if (FFEntre0a4()) {
             auxiliar = GravaArena()[0] + Graduado()[0];
@@ -146,7 +147,7 @@ public class ClasificacionSucs extends Suelo {
 
     public String[] GravaArena() {
 
-        String[] auxiliar = new String[4];
+        String[] auxiliar = new String[5];
 
         if (GravasContenido() > ArenasContenido()) {
             auxiliar[0] = "G";
@@ -158,6 +159,7 @@ public class ClasificacionSucs extends Suelo {
             auxiliar[1] = "Arena";
             auxiliar[2] = " arenosa";
             auxiliar[3] = " con arena";
+            auxiliar[4] = " arenoso";
         }
         return auxiliar;
     }

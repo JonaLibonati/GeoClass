@@ -33,11 +33,11 @@ public class ClasificacionAastho extends Suelo {
         if (menor0mayor100()) {
             auxiliar[0] = "¡Error!\nPorcentajes fuera de 0 a 100";
 
-        } else if (LimiteSuelos()) {
-            auxiliar[0] = "¡Error!\nFuera del límite de Casagrande";
-
         } else if (LPmayorLL()) {
             auxiliar[0] = "¡Error!\nLímite plástico > Límite líquido";
+
+        } else if (LimiteSuelos()) {
+            auxiliar[0] = "¡Error!\nFuera del límite de Casagrande";
 
         } else if (grupoA1a()) {
             auxiliar[0] = "Grupo A1.a";

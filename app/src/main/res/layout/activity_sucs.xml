@@ -70,7 +70,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:maxLength="3" />
+                    android:maxLength="3"
+                    android:imeOptions="actionDone"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -96,7 +97,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:maxLength="3" />
+                    android:maxLength="3"
+                    android:imeOptions="actionDone"/>
+
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -122,7 +125,8 @@
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
                     android:maxLength="5"
-                    android:enabled="false"/>
+                    android:enabled="false"
+                    android:imeOptions="actionDone"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -140,7 +144,8 @@
                 app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintStart_toStartOf="@id/label_n40"
                 app:layout_constraintTop_toBottomOf="@id/label_n40"
-                app:suffixText="@string/Unidad_mm">
+                app:suffixText="@string/Unidad_mm"
+                app:helperTextEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_diametroEfec"
@@ -148,7 +153,8 @@
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
                     android:maxLength="5"
-                    android:enabled="false"/>
+                    android:enabled="false"
+                    android:imeOptions="actionDone"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -175,7 +181,8 @@
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
                     android:maxLength="5"
-                    android:enabled="false"/>
+                    android:enabled="false"
+                    android:imeOptions="actionDone"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -202,7 +209,8 @@
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:maxLength="3"
-                    android:enabled="false"/>
+                    android:enabled="false"
+                    android:imeOptions="actionDone"/>
 
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -230,7 +238,8 @@
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:maxLength="3"
-                    android:enabled="false"/>
+                    android:enabled="false"
+                    android:imeOptions="actionDone"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -257,7 +266,8 @@
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:maxLength="3"
-                    android:enabled="false"/>
+                    android:enabled="false"
+                    android:imeOptions="actionDone"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -277,7 +287,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/label_PM"
                 app:layout_constraintVertical_bias="0.5"
-                app:layout_constraintVertical_chainStyle="packed" />
+                app:layout_constraintVertical_chainStyle="packed"/>
 
             <TextView
                 android:id="@+id/tx_grupo2"
