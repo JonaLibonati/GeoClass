@@ -1,3 +1,5 @@
+THIS CODE SHOULD BE REFACTORED
+
 # GeoClass
 Aplicación para clasificación de suelos SUCS o AASTHO - Beta - (Mi primer aplicación)
 
